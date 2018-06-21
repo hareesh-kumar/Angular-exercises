@@ -1,0 +1,15 @@
+<div class="newapp">
+  <h2>Create a New Product</h2>
+  <form (submit) = 'addNewProduct()'>
+    <label for="title">Title: </label>
+    <input required type="text" name="title" [(ngModel)] = 'product["title"]'><br>
+    <p *ngIf="errors['title']">{{ errors.title.message}}</p>
+    <label for="price">Price: </label>
+    <input required  min = 0 type="number" name="price" [(ngModel)] = 'product["price"]'><br>
+    <p *ngIf="errors['price']">{{ errors.price.message}}</p>
+    <label for="imageurl">Image Url: </label>
+    <input type="text" name="imageurl" [(ngModel)] = 'product["imageurl"]'><br>
+    <input class="btn btn-primary" type="submit" name="submit">
+    <button [routerLink]="['/products/products']" class="btn btn-secondary" type="button" name="cancel">Cancel</button>
+  </form>
+</div>

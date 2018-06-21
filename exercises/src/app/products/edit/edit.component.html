@@ -1,0 +1,18 @@
+<div class="editapp">
+  <h2>Edit Product</h2>
+  <form (submit)='updateProduct()'>
+    <label for="title">Title: </label>
+    <input required type="text" name="title" [(ngModel)]='product["title"]'>
+    <p *ngIf="errors['title']">{{ errors.title.message}}</p>
+    <br>
+    <label for="price">Price: </label>
+    <input required min=0 type="number" name="price" [(ngModel)]='product["price"]'>
+    <p *ngIf="errors['price']">{{ errors.price.message}}</p>
+    <br>
+    <label for="imageurl">Image Url: </label>
+    <input type="text" name="imageurl" [(ngModel)]='product["imageurl"]'>
+    <br>
+    <input class="btn btn-primary" type="submit" name="submit">
+    <button (click)='deleteproduct(product["_id"])' class="btn btn-secondary" type="button" name="cancel">Delete</button>
+  </form>
+</div>

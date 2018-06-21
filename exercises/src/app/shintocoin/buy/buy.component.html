@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Buy ShintoCoins</h1>
+  <h3>Current ShintoCoin value: ${{ wallet.value | number : '1.2' }}</h3>
+  <h3>Number of ShintoCoins Owned: {{ wallet.coins }}</h3>
+  <input [(ngModel)]="number" placeholder="Number">
+  <button (click)='buy()'>Buy</button>
+</div>

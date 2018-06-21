@@ -1,0 +1,11 @@
+<div class="projectapp">
+  <h1>PPM - Project Product Management</h1>
+  <div class="nav">
+    <button [routerLink]="['/products']" class="btn btn-secondary">Home</button>
+    <button [routerLink]="['products']" class="btn btn-secondary">Product List</button>
+    <button [routerLink]="['new']" class="btn btn-secondary">Product Creation</button>
+  </div>
+  <div class="subapps">
+    <router-outlet></router-outlet>
+  </div>
+</div>

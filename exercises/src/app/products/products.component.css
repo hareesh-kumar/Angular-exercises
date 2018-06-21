@@ -1,0 +1,14 @@
+.subapps{
+    border: 3px black solid;
+    border-radius: 5px;
+    width: 500px;
+    margin: auto;
+}
+.projectapp {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.btn{
+    margin: 0 auto 10px auto;
+}

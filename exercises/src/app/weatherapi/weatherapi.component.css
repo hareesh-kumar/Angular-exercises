@@ -1,0 +1,9 @@
+.apptitle{
+    text-align: center;
+}
+.apptitle a{
+    padding: 10px;
+}
+.menu-right-border{
+    border-right: 2px black solid;
+}
