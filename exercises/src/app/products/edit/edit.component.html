@@ -1,18 +1,22 @@
 <div class="editapp">
   <h2>Edit Product</h2>
-  <form (submit)='updateProduct()'>
+  <form (submit)='updateProduct()' #myproductform = "ngForm">
     <label for="title">Title: </label>
     <input required type="text" name="title" [(ngModel)]='product["title"]'>
     <p *ngIf="errors['title']">{{ errors.title.message}}</p>
     <br>
     <label for="price">Price: </label>
-    <input required min=0 type="number" name="price" [(ngModel)]='product["price"]'>
+    <input required min=0 type="number" name="price" [(ngModel)]='product["price"]' #number = "ngModel">
     <p *ngIf="errors['price']">{{ errors.price.message}}</p>
     <br>
     <label for="imageurl">Image Url: </label>
     <input type="text" name="imageurl" [(ngModel)]='product["imageurl"]'>
     <br>
-    <input class="btn btn-primary" type="submit" name="submit">
+    <input [disabled]="myproductform.invalid" class="btn btn-primary" type="submit" name="submit">
     <button (click)='deleteproduct(product["_id"])' class="btn btn-secondary" type="button" name="cancel">Delete</button>
+    {{ myproductform.invalid | json}}
+    {{ myproductform.errors | json}}
+    {{ number.valid | json}}
+    {{ number.errors | json}}
   </form>
 </div>
